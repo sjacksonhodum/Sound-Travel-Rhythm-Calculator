@@ -11,7 +11,7 @@ A modern web app for calculating rhythmic delays based on the speed of sound, di
 - Attribution and GitHub link at the bottom
 
 ## Usage
-1. Open `index.html` in your browser. You also can go to [website]([https://github.com](https://sjacksonhodum.github.io/Sound-Travel-Rhythm-Calculator/)) 
+1. Open `index.html` in your browser. You also can go to [website](https://sjacksonhodum.github.io/Sound-Travel-Rhythm-Calculator/)
 2. Enter:
    - Distance (yards)
    - Temperature (°F)
