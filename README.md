@@ -1,14 +1,11 @@
 # Sound Travel Rhythm Calculator
 
-A modern web app for calculating rhythmic delays based on the speed of sound, distance, temperature, tempo, and beat unit. Built for musicians, engineers, and anyone interested in precise rhythmic timing over distance.
+A modern web app for calculating rhythmic delays based on the speed of sound, distance, temperature, tempo, and beat unit.
 
 ## Features
 - Calculates sound travel delay in musical note values (1/4, 1/8, 1/16, 1/32 notes)
-- Supports custom beat units and common musical values
 - Visualizes results with interactive charts (powered by Chart.js)
 - Sleek, responsive Bootstrap UI
-- Transparent math: see all intermediate calculation steps
-- Attribution and GitHub link at the bottom
 
 ## Usage
 1. Open `index.html` in your browser. You also can go to [website](https://sjacksonhodum.github.io/Sound-Travel-Rhythm-Calculator/)
