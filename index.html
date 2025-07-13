@@ -156,28 +156,28 @@
         // Calculate travel time in seconds
         const travelTime = distance / speedOfSound;
         
-        // Calculate beat duration in seconds
-        const beatDuration = 60 / tempo;
+        // Calculate whole notes per second based on beat unit and tempo
+        const wholeNotesPerSecond = beatUnit * tempo / 60;
         
-        // FINAL CORRECTED FORMULA (matches shortcut exactly)
-        const baseDelay = (travelTime / beatDuration) * (0.25 / beatUnit) * 0.43 * 2;
+        // Calculate base delay in whole notes
+        const baseDelay = travelTime * wholeNotesPerSecond;
         
         // Display results
         document.getElementById('resultsDetails').innerHTML = `
           <div class="row">
             <div class="col-md-6"><b>Speed of Sound:</b> ${speedOfSound.toFixed(2)} yd/s</div>
             <div class="col-md-6"><b>Travel Time:</b> ${(travelTime * 1000).toFixed(2)} ms</div>
-            <div class="col-md-6"><b>Beat Duration:</b> ${beatDuration.toFixed(4)} s</div>
-            <div class="col-md-6"><b>Base Delay:</b> ${baseDelay.toFixed(4)} beats</div>
+            <div class="col-md-6"><b>Whole Notes Per Second:</b> ${wholeNotesPerSecond.toFixed(4)}</div>
+            <div class="col-md-6"><b>Base Delay:</b> ${baseDelay.toFixed(4)} whole notes</div>
           </div>
         `;
         
         // Calculate all note delays
         const noteMultipliers = [
-          { label: '1/4 notes', value: 1 },
-          { label: '1/8 notes', value: 2 },
-          { label: '1/16 notes', value: 4 },
-          { label: '1/32 notes', value: 8 }
+          { label: '1/4 notes', value: 4 },
+          { label: '1/8 notes', value: 8 },
+          { label: '1/16 notes', value: 16 },
+          { label: '1/32 notes', value: 32 }
         ];
         
         // Populate table
@@ -204,7 +204,7 @@
           data: {
             labels: labels,
             datasets: [{
-              label: 'Delay in beats',
+              label: 'Delay in whole notes',
               data: delayData,
               backgroundColor: '#7c3aed',
               borderRadius: 8
@@ -224,7 +224,7 @@
                 beginAtZero: true,
                 title: {
                   display: true,
-                  text: 'Beats'
+                  text: 'Whole notes'
                 }
               }
             }
