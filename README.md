@@ -25,4 +25,4 @@ t = (Distance [yd] / (362.114 * sqrt(((Temp [ºF] - 32)/1.8 + 273.15)/273.15))) 
 ```
 
 ## Attribution
-Idea initially developed by Jeremy Bahadirli, website built by @sjacksonhodum (not very stable right now... Sorry!)
+Idea initially developed by Jeremy Bahadirli, website built by @sjacksonhodum (calculations should be accurate)
